@@ -1,8 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
-#python spēle ar akmentiņiem ar MinMax AI
-#izstrādāja Artūrs Stīpnieks, 181RDB206, 1.grupa, 3. kurss 2020 2021
-#visa izvade uz termināli ir tikai debugosanas nolūkos
+#python game with MinMax AI
+#made by Arturs Stipnieks (turbo7021)
 class snakeWalnut(): # the snake filled walnut tree by turbo7021 
     def __init__(self): # initialize tree
         self.valueList = []     # when building, the current level being built
