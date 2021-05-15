@@ -9,37 +9,35 @@ class snakeWalnut(): # the snake filled walnut tree by turbo7021
         self.humanStart = True  # whether man or computer begins
         self.addValue(self.count(), [0, 0, 0], None, 0) # makes root node
 
-        self.turnOneValue = 2   # CHANGE THIS FOR FIRST TURN VALUE
-        self.turnTwoValue = 3   # CHANGE THIS FOR SECOND TURN VALUE
 
     def treeAdd1H(self, value, data): # adds tree element where human puts small value
-        if (data[1] + self.turnOneValue) <= 10:
-            valueData = [data[0] + self.turnOneValue, data[1] + self.turnOneValue, data[2]]
-            self.treeAdd(value, valueData, self.count(), self.turnOneValue)
+        if (data[1] + 2) <= 10:
+            valueData = [data[0] + 2, data[1] + 2, data[2]]
+            self.treeAdd(value, valueData, self.count(), 2)
         else:
             return
 
 
     def treeAdd2H(self, value, data): # adds tree element where human puts big value
-        if (data[1] + self.turnTwoValue) <= 10:
-            valueData = [data[0] + self.turnTwoValue, data[1] + self.turnTwoValue, data[2]]
-            self.treeAdd(value, valueData, self.count(), self.turnTwoValue)
+        if (data[1] + 3) <= 10:
+            valueData = [data[0] + 3, data[1] + 3, data[2]]
+            self.treeAdd(value, valueData, self.count(), 3)
         else:
             return
 
 
     def treeAdd1C(self, value, data): # adds tree element where computer puts small value
-        if (data[1] + self.turnOneValue) <= 10:
-            valueData = [data[0], data[1] + self.turnOneValue, data[2] + self.turnOneValue]
-            self.treeAdd(value, valueData, self.count(), self.turnOneValue)
+        if (data[1] + 2) <= 10:
+            valueData = [data[0], data[1] + 2, data[2] + 2]
+            self.treeAdd(value, valueData, self.count(), 2)
         else:
             return
 
 
     def treeAdd2C(self, value, data): # adds tree element where computer puts big value
-        if (data[1] + self.turnTwoValue) <= 10:
-            valueData = [data[0], data[1] + self.turnTwoValue, data[2] + self.turnTwoValue]
-            self.treeAdd(value, valueData, self.count(), self.turnTwoValue)
+        if (data[1] + 3) <= 10:
+            valueData = [data[0], data[1] + 3, data[2] + 3]
+            self.treeAdd(value, valueData, self.count(), 3)
         else:
             return
 
